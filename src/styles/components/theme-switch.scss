@@ -1,0 +1,50 @@
+.theme-switch {
+    display: none;
+    cursor: pointer;
+    &:before {
+        display: block;
+        position: absolute;
+    }
+    &:focus {
+        outline: transparent;
+    }
+    &__icon {
+        height: 23px;
+        width: 23px;
+        display: block;
+        transform-origin: 50% 0;
+        &:nth-child(2) {
+            transform-origin: 50% 100%;
+        }
+    }
+    &__label {
+        display: block;
+        overflow: hidden;
+        height: 23px;
+        text-indent: -0.9em;
+    }
+}
+
+.theme-switch,
+.theme-switch:before,
+.theme-switch__icon {
+    transition-property: background-color, transform, visibility;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in, cubic-bezier(0.6, 0.2, 0.4, 1.5), linear;
+}
+
+[data-theme="dark"] {
+    .theme-switch__icon {
+        transform-origin: 50% 100%;
+    }
+    .theme-switch__icon:nth-child(2) {
+        transform-origin: 50% 0;
+    }
+
+    .theme-switch__icon--light {
+        transform: translateY(-100%);
+    }
+    .theme-switch__icon--dark {
+        transform: translateY(-100%);
+    }
+}

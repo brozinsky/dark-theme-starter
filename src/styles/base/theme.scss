@@ -1,0 +1,10 @@
+[data-theme="dark"] {
+    background-color: hsl(0, 0%, 5%);
+    body,
+    html {
+        @apply text-gray-100;
+    }
+    .sticky {
+        background-color: hsl(0, 0%, 10%);
+    }
+}
