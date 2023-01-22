@@ -29,8 +29,8 @@ const DarkSwitch = () => {
     };
 
     return (
-        <div className="cursor-pointer">
-            <input id="toggle" className={`theme-switch ${theme === "dark" ? "clicked" : ""}`} type="checkbox" role="switch" name="toggle" value={theme} onChange={(e) => switchTheme(e)} />
+        <div className="theme-switch">
+            <input id="toggle" className={`theme-switch__input ${theme === "dark" ? "clicked" : ""}`} type="checkbox" role="switch" name="toggle" value={theme} onChange={(e) => switchTheme(e)} />
             <label htmlFor="toggle" className="theme-switch__label cursor-pointer">
                 <span className={`theme-switch__icon theme-switch__icon--light`}>
                     <svg className="h-full w-full" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">

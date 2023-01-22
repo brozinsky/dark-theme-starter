@@ -1,5 +1,4 @@
 .theme-switch {
-    display: none;
     cursor: pointer;
     &:before {
         display: block;
@@ -7,6 +6,9 @@
     }
     &:focus {
         outline: transparent;
+    }
+    &__input {
+        display: none;
     }
     &__icon {
         height: 23px;
@@ -34,17 +36,18 @@
 }
 
 [data-theme="dark"] {
-    .theme-switch__icon {
-        transform-origin: 50% 100%;
-    }
-    .theme-switch__icon:nth-child(2) {
-        transform-origin: 50% 0;
-    }
-
-    .theme-switch__icon--light {
-        transform: translateY(-100%);
-    }
-    .theme-switch__icon--dark {
-        transform: translateY(-100%);
+    .theme-switch {
+        &__icon {
+            transform-origin: 50% 100%;
+            &:nth-child(2) {
+                transform-origin: 50% 0;
+            }
+            &--light {
+                transform: translateY(-100%);
+            }
+            &--dark {
+                transform: translateY(-100%);
+            }
+        }
     }
 }
